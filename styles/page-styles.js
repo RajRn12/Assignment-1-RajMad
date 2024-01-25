@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
 	},
 	dateBox: {
 		width: '30%',
+		height: '4%',
 		borderWidth: 0.4,
 		marginLeft: 132,
 		marginTop: 60,
@@ -84,10 +85,10 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 	},
 	userEvent: {
-		width: '29%',
+		width: '28%',
 		height: '4%',
 		borderWidth: 0.4,
-		marginLeft: 182,
+		marginLeft: 185,
 		marginTop: 215,
 		textAlign: 'center',
 		position: 'absolute',

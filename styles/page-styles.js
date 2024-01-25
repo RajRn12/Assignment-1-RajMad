@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
 		marginTop: 103,
 		textAlign: 'center',
 		position: 'absolute',
-		fontWeight: 'bold',
 	},
 	userNoun: {
 		width: '35%',
@@ -83,7 +82,6 @@ const styles = StyleSheet.create({
 		marginTop: 140,
 		textAlign: 'center',
 		position: 'absolute',
-		fontWeight: 'bold',
 	},
 	userEvent: {
 		width: '29%',
@@ -93,7 +91,6 @@ const styles = StyleSheet.create({
 		marginTop: 215,
 		textAlign: 'center',
 		position: 'absolute',
-		fontWeight: 'bold',
 	},
 
 	// signature box

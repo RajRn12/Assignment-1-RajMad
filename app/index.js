@@ -45,18 +45,18 @@ export default function Page() {
 	const [date_Year, setDate_Year] = React.useState(date_[2]);
 
 	return (
-		<View style={Styles.page}>
+		<View style={Styles.oneView}>
 			<Text style={{fontWeight:'bold', fontSize: 20}}>Fill in the Boxes:</Text>
 			<Text>Create Hall Pass</Text>
-			
-			{/* Name Input Box */}
-			<Text style={Styles.label}>{name_Label}</Text>
-			<TextInput
-				style={Styles.input}
-				onChangeText={onChangeName}
-				value={name}
-				placeholder={name_Hint}
-			/>
+			<View style={Styles.twoView}>	
+				{/* Name Input Box */}
+				<Text style={Styles.label}>{name_Label}</Text>
+				<TextInput
+					style={Styles.input}
+					onChangeText={onChangeName}
+					value={name}
+					placeholder={name_Hint}
+				/>
 			
 			{/* Noun Input Box  */}
 			<Text style={Styles.label}>{noun_Label}</Text>
@@ -75,7 +75,8 @@ export default function Page() {
 				value={event}
 				placeholder={event_Hint}
 			/>
-
+			</View>
+			<View style={Styles.thirdView}>
 			{/* Link to next page and passing parameters connected to 'Make Pass' Button */}
 			<Link
 				style={Styles.button}
@@ -104,7 +105,8 @@ export default function Page() {
 			onPress = {clear}
 			>
 				<Text>Clear</Text>
-			</Pressable>
+				</Pressable>
+				</View>
 		</View>
 	)
 }

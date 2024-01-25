@@ -8,19 +8,39 @@ import { Text, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
 	// Page 1
-	page: {
+	oneView: {
 		flex: 1,
 		backgroundColor: 'white',
-		paddingRight: 20,
-		paddingLeft: 20,
+		marginLeft: 3,
 	},
+	twoView: {
+		flex: 0.5,
+		backgroundColor: 'white',
+		alignItems: 'left',
+		justifyContent: 'space-between',
+		malignLeft: 6,
+
+	},
+	thirdView: {
+		flex: 0.5,
+		backgroundColor: 'red',
+		alignItems: 'center',
+		flexDirection: 'row',
+		width: '50%',
+		display: 'fixed',
+		position: 'fixed',
+
+    },
 	button: {
 		backgroundColor: 'dodgerblue',
 		borderRadius: 10,
-		margin: 10,
-		padding: 10,
+		marginTop: 10,
+		height: '20%',
+		width: '60%',
 		borderWidth: 1.5,
 		alignItems: 'center',
+		justifyContent: 'center',
+		position: 'fixed',
 	},
 	input: {
 		width: '80%',

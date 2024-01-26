@@ -14,21 +14,18 @@ const styles = StyleSheet.create({
 		marginLeft: 3,
 	},
 	twoView: {
-		flex: 0.5,
 		backgroundColor: 'white',
 		alignItems: 'left',
 		justifyContent: 'space-between',
-		malignLeft: 6,
+		marginLeft: 4,
 
 	},
 	thirdView: {
-		flex: 0.5,
-		backgroundColor: 'red',
+		backgroundColor: 'white',
 		alignItems: 'center',
 		flexDirection: 'row',
-		width: '50%',
-		display: 'fixed',
-		position: 'fixed',
+		width: '60%',
+		marginLeft: 48,
 
     },
 	button: {

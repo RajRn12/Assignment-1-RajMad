@@ -8,53 +8,76 @@ import { Text, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
 	// Page 1
+	// View
 	oneView: {
 		flex: 1,
 		backgroundColor: 'white',
-		marginLeft: 3,
+		marginLeft: 1,
+		alignItems: 'center'
 	},
 	twoView: {
-		backgroundColor: 'white',
-		alignItems: 'left',
-		justifyContent: 'space-between',
-		marginLeft: 4,
-
+		padding: 10,
+		width: '90%',
+		alignItems: 'center',
 	},
 	thirdView: {
-		backgroundColor: 'white',
-		alignItems: 'center',
-		flexDirection: 'row',
-		width: '60%',
-		marginLeft: 48,
-
-    },
-	button: {
-		backgroundColor: 'dodgerblue',
-		borderRadius: 10,
 		marginTop: 10,
-		height: '20%',
-		width: '60%',
-		borderWidth: 1.5,
-		alignItems: 'center',
-		justifyContent: 'center',
-		position: 'fixed',
+		flexDirection: 'row',
+		marginTop: 0,
+		width: '65%',
+		justifyContent: 'space-between',
 	},
+
+	// Button
+	makeButton: {
+		overflown: 'hidden',
+		backgroundColor: 'lightgreen',
+		borderRadius: 90,
+		height: '100%',
+		width: '40%',
+		marginLeft: 7,
+	},
+	makeButtonText: {
+		textAlign: 'center',
+		marginTop: 15,
+		marginLeft: 3,
+		color: 'blue',
+		fontWeight: 'bold'
+	},
+	clearButton: {
+		overflown: 'hidden',
+		backgroundColor: 'red',
+		borderRadius: 90,
+		height: '100%',
+		width: '40%',
+		marginRight: 6,
+	},
+	clearButtonText: {
+		textAlign: 'center',
+		marginTop: 15,
+		marginLeft: 3,
+		color: 'white',
+		fontWeight: 'bold'
+	},
+
+	// Input Boxes
 	input: {
-		width: '80%',
+		width: '90%',
+		height: 50,
 		borderWidth: 1,
 		borderRadius: 10,
-		textAlign: 'center',
 		marginTop: 10,
 		marginBottom: 20,
 		paddingBottom: 20,
-		marginLeft: 33,
+		textAlign: 'center',
 	},
 
 	// Page 2
 	// other stuff
-	page2: {
+	pageView: {
 		flex: 1,
-		backgroundColor: "white",
+		backgroundColor: 'white',
+		alignItems: 'center'
 	},
 	headText: {
 		marginTop: 25,

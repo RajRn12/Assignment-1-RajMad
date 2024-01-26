@@ -34,31 +34,34 @@ export default function Page() {
 	date = String(date_Month + "/" + date_Day + "/" + date_Year);
 
 	return (
-			
-		<View style={Styles.page2}>
-			<Text style={Styles.headText}>
-				<Text>MAD LIBS{'\n'}</Text>
-			</Text>
+		// Main View
+		<View style={Styles.pageView}>
+			{/* Head View */}
+			<View>
+				{/* Date label - text style*/}
+				<Text style={Styles.headText}>
+					<Text>MAD LIBS{'\n'}</Text>
+				</Text>
+				<Text
+					style={{
+						fontSize: 20,
+						fontWeight: 'bold',
+						position: 'absolute',
+						marginTop: 60,
+						marginLeft: 80,
+					}}>
+					{date_Label}
+				</Text>
 
-			{/* Date label - text style*/ }
-			<Text
-				style={{
-					fontSize: 20,
-					fontWeight: 'bold',
-					position: 'absolute',
-					marginTop: 60,
-					marginLeft: 80,
-				}}>
-				{date_Label}
-			</Text>
+				{/* Present Date Field - read only */}
+				<TextInput
+					style={Styles.dateBox}
+					placeholder={date}
+					readOnly={true}
+				/>
+			</View>
 
-			{/* Present Date Field - read only */ }
-			<TextInput
-				style={Styles.dateBox}
-				placeholder={date}
-				readOnly={true}>
-			</TextInput>
-
+			{/* HALL PASS View */}
 			{/* Rotate Box with Text 'HALL PASS' */}
 			{/* Lower translateY (positive #) to move it up */}
 			{/* Lower translateX (make more negative #) to move it right */}
@@ -67,57 +70,68 @@ export default function Page() {
 				style={[
 					Styles.box,
 					{
-						transform: [{ translateY: 109 }, { translateX: -90}, { rotate: '-90deg' }],
+						transform: [{ translateY: 109 }, { translateX: -90 }, { rotate: '-90deg' }],
 					},
 				]}>
-				<Text style={Styles.boxText}>hall pass</Text>
+				<Text style={Styles.boxText}>HALL PASS</Text>
 			</View>
 
 			{/* Body */}
-			{/* Name Field - read only */}
-			<TextInput
-				style={Styles.userName}
-				value={name }
-				placeholder={name_Hint}
-				readOnly={true}
-				adjustsFontSizeToFit={true}>
-			</TextInput>
+			{/* Name View */} 
+			<View>
+				{/* Name Field - read only & Extra text */}
+				<TextInput
+					style={Styles.userName}
+					value={name }
+					placeholder={name_Hint}
+					readOnly={true}
+					adjustsFontSizeToFit={true}
+				/>
+				<Text>is too cool</Text>
+			</View>
 
-			{/* Noun Field - read only */}
-			<TextInput
-				style={Styles.userNoun}
-				placeholder={noun_Hint}
-				value={noun }
-				readOnly={true}
-				adjustsFontSizeToFit={true}>
-			</TextInput>
+			{/* Noun View */} 
+			<View>
+				{/* Noun Field - read only */}
+				<Text>for</Text>
+				<TextInput
+					style={Styles.userNoun}
+					placeholder={noun_Hint}
+					value={noun }
+					readOnly={true}
+					adjustsFontSizeToFit={true}
+				/>
+				<Text>class.</Text>
+			</View>
 
-			{/* Event Field - read only */}
-			<TextInput
-				style={Styles.userEvent}
-				value={event}
-				placeholder={event_Hint}
-				readOnly={true}
-				adjustsFontSizeToFit={true}>
-			</TextInput>
-
-			{/* don't know how to move text with numbers - move them manually*/}
-			<Text style={Styles.bodyText}>
-				<Text>               is too cool {'\n'}{'\n'}</Text>
-				<Text>for                 </Text>
-				<Text>                    class. {'\n'}{'\n'}</Text>
+			{/* Instead View */}
+			<View>
 				<Text>Instead, she/he will be {'\n'}{'\n'}</Text>
-				<Text>attending the    </Text>
-				<Text>                        .{'\n'}{'\n'}</Text>   
-			</Text>
-			
-			{/* Kind of signed signature box - read only */}
-			<TextInput
-				style={Styles.signatureBox}
-				readOnly={true}
-				placeholder={signed}
-			/>
-		
+			</View>
+
+			{/* Event View */}
+			<View>
+				{/* Event Field - read only */}
+				<Text>attending the</Text>
+				<TextInput
+					style={Styles.userEvent}
+					value={event}
+					placeholder={event_Hint}
+					readOnly={true}
+					adjustsFontSizeToFit={true}
+				/>
+				<Text>.</Text>   
+			</View>
+
+			{/* Signature View */} 
+			<View>
+				{/* Kind of signed signature box - read only */}
+				<TextInput
+					style={Styles.signatureBox}
+					readOnly={true}
+					placeholder={signed}
+				/>
+			</View>
 		</View>
 	)
 }

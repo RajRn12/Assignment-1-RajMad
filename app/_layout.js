@@ -15,30 +15,29 @@ export default function Layout() {
 				color: "white"
 			},
 		}}>
-			<Stack.screen
-				name="index"
-				options={{
-					headerShown: true,
-					headerBackVisible: false,
-				}}
-			/>
+		<Stack.screen
+			name="index"
+			options={{
+				headerShown: true,
+				headerBackVisible: false,
+			}}
+		/>
 
-			{/* Next Page */ }
-			<Stack.Screen
-				name="page2"
-				options={{
-					headerTitle: "Hall Pass",
-					headerShown: true,
-					headerTitleStyle: {
-						color: "white",
-						fontWeight: "bold"
-					},
-					headerTitleAlign: "center",
-					headerTintColor: "yellow",
+		{/* Next Page */ }
+		<Stack.Screen
+			name="page2"
+			options={{
+				headerTitle: "Hall Pass",
+				headerShown: true,
+				headerTitleStyle: {
+					color: "white",
+					fontWeight: "bold"
+				},
+				headerTitleAlign: "center",
+				headerTintColor: "yellow",
 
-				}}
-				/>
-		
+			}}
+		/>
 		</Stack>
 	);
 }

@@ -45,9 +45,12 @@ export default function Page() {
 	const [date_Year, setDate_Year] = React.useState(date_[2]);
 
 	return (
+		// Main View
 		<View style={Styles.oneView}>
 			<Text style={{fontWeight:'bold', fontSize: 20}}>Fill in the Boxes:</Text>
 			<Text>Create Hall Pass</Text>
+
+			{/* Second View */}
 			<View style={Styles.twoView}>	
 				{/* Name Input Box */}
 				<Text style={Styles.label}>{name_Label}</Text>
@@ -76,40 +79,43 @@ export default function Page() {
 				placeholder={event_Hint}
 			/>
 			</View>
-			<View style={Styles.thirdView}>
-			{/* Link to next page and passing parameters connected to 'Make Pass' Button */}
-			<Link
-				style={Styles.button}
-				href={{
-					pathname: "/page2",
-					params: {
-						name,
-						noun,
-						event,
-						date_Label,
-						date_Month,
-						date_Day,
-						date_Year
-					} 
-			}} asChild
-			> 
-				{/* takes to second page upon pressing 'Make Pass' button */ }
-				<Pressable>
-					<Text>Make Pass {'\n'}</Text>
-				</Pressable>
-			</Link>
 
-			{/* Clear Button - clear text input values on press */}
-			<Pressable
-			style={Styles.button}
-			onPress = {clear}
-			>
-				<Text>Clear</Text>
+			{/* Third View */}
+			<View style={Styles.thirdView}>
+				{/* Link to next page and passing parameters connected to 'Make Pass' Button */}
+				<Link
+					style={Styles.makeButton}
+						href={{
+							pathname: "/page2",
+							params: {
+							name,
+							noun,
+							event,
+							date_Label,
+							date_Month,
+							date_Day,
+							date_Year
+							} 
+					}} asChild
+				> 
+					{/* takes to second page upon pressing 'Make Pass' button */ }
+					<Pressable>
+						<Text style={Styles.makeButtonText}>Make Pass {'\n'}</Text>
+					</Pressable>
+				</Link>
+
+				{/* Clear Button - clear text input values on press */}
+				<Pressable
+				style={Styles.clearButton}
+				onPress = {clear}
+				>
+					<Text style={Styles.clearButtonText}>Clear</Text>
 				</Pressable>
-				</View>
+			</View>
 		</View>
 	)
 }
+
 // function to get present date in array list
 function get_Today_Date() {
 	const today_Date = new Date();

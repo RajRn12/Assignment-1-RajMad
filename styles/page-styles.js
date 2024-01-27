@@ -9,13 +9,12 @@ import Page from '../app/page2';
 
 const styles = StyleSheet.create({
 	// Page 1
-	// View
+	// Views
 	oneView: {
 		flex: 1,
 		backgroundColor: 'white',
 		marginLeft: 1,
-		alignItems: 'center',
-		
+		alignItems: 'center',	
 	},
 	twoView: {
 		padding: 10,
@@ -28,7 +27,6 @@ const styles = StyleSheet.create({
 		marginTop: 0,
 		width: '65%',
 		justifyContent: 'space-between',
-
 	},
 
 	// Button
@@ -63,7 +61,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold'
 	},
 
-	// Label
+	// Label Style
 	pageOne_Label: {
 		fontWeight: 'bold',
 		fontSize: 15,
@@ -87,7 +85,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: 'white',
 		alignItems: 'center',
-
 	},
 
 	headText: {

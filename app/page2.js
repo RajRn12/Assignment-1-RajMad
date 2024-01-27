@@ -123,7 +123,7 @@ export default function Page() {
 				style={[
 					Styles.hallView,
 					{
-						transform: [{ translateY: -175 }, { translateX: -165 }, { rotate: '-90deg' }],
+						transform: [{ translateY: -175 }, { translateX: -153 }, { rotate: '-90deg' }],
 					},
 				]}>
 				<Text style={Styles.hallText}>HALL PASS</Text>

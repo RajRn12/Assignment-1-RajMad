@@ -28,7 +28,7 @@ export default function Page() {
 	const [event_Hint, setEvent_Hint] = React.useState("Fun Event"); 
 
 	// for labeling signature box signed
-	const [signed, setSigned] = React.useState("SIGNED:");
+	const [signed_Label, setSigned] = React.useState("SIGNED:");
 
 	// format present date in string
 	date = String(date_Month + "/" + date_Day + "/" + date_Year);
@@ -36,23 +36,19 @@ export default function Page() {
 	return (
 		// Main View
 		<View style={Styles.pageView}>
-			{/* Head View */}
-			<View>
+			<Text style={Styles.headText}>
+				<Text>MAD LIBS{'\n'}</Text>
+			</Text>
+			{/* Date View */}
+			<View style={Styles.dateView}>
 				{/* Date label - text style*/}
-				<Text style={Styles.headText}>
-					<Text>MAD LIBS{'\n'}</Text>
-				</Text>
 				<Text
 					style={{
 						fontSize: 20,
 						fontWeight: 'bold',
-						position: 'absolute',
-						marginTop: 60,
-						marginLeft: 80,
 					}}>
 					{date_Label}
 				</Text>
-
 				{/* Present Date Field - read only */}
 				<TextInput
 					style={Styles.dateBox}
@@ -61,24 +57,10 @@ export default function Page() {
 				/>
 			</View>
 
-			{/* HALL PASS View */}
-			{/* Rotate Box with Text 'HALL PASS' */}
-			{/* Lower translateY (positive #) to move it up */}
-			{/* Lower translateX (make more negative #) to move it right */}
-			{/* Postive 90deg-rotated 'HALL PASS' faces left, negative faces right */}
-			<View
-				style={[
-					Styles.box,
-					{
-						transform: [{ translateY: 109 }, { translateX: -90 }, { rotate: '-90deg' }],
-					},
-				]}>
-				<Text style={Styles.boxText}>HALL PASS</Text>
-			</View>
-
+		
 			{/* Body */}
-			{/* Name View */} 
-			<View>
+			{/* Name View */}
+			<View style={Styles.nameView}>
 				{/* Name Field - read only & Extra text */}
 				<TextInput
 					style={Styles.userName}
@@ -87,13 +69,13 @@ export default function Page() {
 					readOnly={true}
 					adjustsFontSizeToFit={true}
 				/>
-				<Text>is too cool</Text>
+				<Text style={Styles.extraText}> is too cool</Text>
 			</View>
 
 			{/* Noun View */} 
-			<View>
+			<View style={Styles.nounView}>
 				{/* Noun Field - read only */}
-				<Text>for</Text>
+				<Text>for </Text>
 				<TextInput
 					style={Styles.userNoun}
 					placeholder={noun_Hint}
@@ -101,18 +83,18 @@ export default function Page() {
 					readOnly={true}
 					adjustsFontSizeToFit={true}
 				/>
-				<Text>class.</Text>
+				<Text> class.</Text>
 			</View>
 
 			{/* Instead View */}
-			<View>
-				<Text>Instead, she/he will be {'\n'}{'\n'}</Text>
+			<View style={Styles.insteadView}>
+				<Text style={Styles.extraText}>Instead, she/he will be {'\n'}{'\n'}</Text>
 			</View>
 
 			{/* Event View */}
-			<View>
+			<View style={Styles.eventView}>
 				{/* Event Field - read only */}
-				<Text>attending the</Text>
+				<Text>attending the </Text>
 				<TextInput
 					style={Styles.userEvent}
 					value={event}
@@ -123,15 +105,32 @@ export default function Page() {
 				<Text>.</Text>   
 			</View>
 
-			{/* Signature View */} 
-			<View>
+
+			{/* Signature View */}
+			<View style={Styles.signatureView}>
 				{/* Kind of signed signature box - read only */}
 				<TextInput
-					style={Styles.signatureBox}
+					style={Styles.signatureText}
 					readOnly={true}
-					placeholder={signed}
+					placeholder={signed_Label}
 				/>
 			</View>
+
+			{/* HALL PASS View */}
+			{/* Rotate Box with Text 'HALL PASS' */}
+			{/* Lower translateY (positive #) to move it up */}
+			{/* Lower translateX (negative #) to move it right */}
+			{/* Postive 90deg-rotated 'HALL PASS' faces left, negative faces right */}
+			<View
+				style={[
+					Styles.hallView,
+					{
+						transform: [{ translateY: -175 }, { translateX: -165 }, { rotate: '-90deg' }],
+					},
+				]}>
+				<Text style={Styles.hallText}>HALL PASS</Text>
+			</View>
+
 		</View>
 	)
 }

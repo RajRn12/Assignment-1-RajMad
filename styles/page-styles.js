@@ -5,6 +5,7 @@ React Native Docs,
 Raj Rai
 */
 import { Text, StyleSheet } from 'react-native';
+import Page from '../app/page2';
 
 const styles = StyleSheet.create({
 	// Page 1
@@ -13,7 +14,8 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: 'white',
 		marginLeft: 1,
-		alignItems: 'center'
+		alignItems: 'center',
+		
 	},
 	twoView: {
 		padding: 10,
@@ -26,6 +28,7 @@ const styles = StyleSheet.create({
 		marginTop: 0,
 		width: '65%',
 		justifyContent: 'space-between',
+
 	},
 
 	// Button
@@ -60,6 +63,12 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold'
 	},
 
+	// Label
+	pageOne_Label: {
+		fontWeight: 'bold',
+		fontSize: 15,
+	},
+
 	// Input Boxes
 	input: {
 		width: '90%',
@@ -73,101 +82,119 @@ const styles = StyleSheet.create({
 	},
 
 	// Page 2
-	// other stuff
+	// Main View
 	pageView: {
 		flex: 1,
 		backgroundColor: 'white',
-		alignItems: 'center'
+		alignItems: 'center',
+
 	},
+
 	headText: {
 		marginTop: 25,
-		marginBottom:0,
-
+		marginBottom: 0,
 		fontSize: 20,
 		fontWeight: 'bold',
 		textAlign: 'center'
 	},
-	bodyText: {
-		fontSize: 16,
-		textAlign: 'center',
-		marginBottom: 12,
-		marginTop: 30,
-		marginLeft: 15,
+
+	// Date View
+	dateView: {
+		height: 30,
+		width: '40%',
+		alignItems: 'left',
+		flexDirection: 'row',
+		justifyContent: 'center',
 	},
 	dateBox: {
-		width: '30%',
-		height: '4%',
-		borderWidth: 0.4,
-		marginLeft: 132,
-		marginTop: 60,
-		textAlign: 'center',
-		position: 'absolute',
+		width: '50%',
+		height: 30,
 		fontWeight: 'bold',
+		marginLeft: 5,
+		borderWidth: 1,
+		borderRadius: 10,
+		textAlign: 'center',
 	},
 
-	// user fields
-	userName: {
-		width: '25%',
-		height: '4%',
-		borderWidth: 0.4,
-		marginLeft: 80,
-		marginTop: 103,
+	// Hall Pass View
+	hallView: {
+		backgroundColor: 'white',
+	},
+	hallText: {
+		fontSize: 60,
+		fontWeight: 'bold',
+		color: 'black',
+		textTransform: 'uppercase',
 		textAlign: 'center',
-		position: 'absolute',
+	},
+
+	// Name View
+	nameView: {
+		height: 20,
+		flexDirection: 'row',
+		justifyContent: 'center',
+		marginTop: 30,
+		marginBottom: 25,
+		overflown:'hidden',
+	},
+	userName: {
+		fontSize: 16,
+		color: 'black',
+		textAlign: 'center',
+		borderWidth: 0.5,
+	},
+
+	// Noun View
+	nounView: {
+		height: 20,
+		flexDirection: 'row',
+		justifyContent: 'center',
+		marginBottom: 25,
 	},
 	userNoun: {
-		width: '35%',
-		height: '4%',
-		borderWidth: 0.4,
-		marginLeft: 111,
-		marginTop: 140,
+		fontSize: 16,
+		color: 'black',
 		textAlign: 'center',
-		position: 'absolute',
+		borderWidth: 0.5,
+	},
+
+	// Instead View
+	insteadView: {
+		height: 20,
+		flexDirection: 'row',
+		justifyContent: 'center',
+		marginBottom: 25,
+	},
+	extraText: {
+		fontSize: 16,
+	},
+
+	// Event View
+	eventView: {
+		height: 20,
+		flexDirection: 'row',
+		justifyContent: 'center',
+		marginBottom: 25,
 	},
 	userEvent: {
-		width: '28%',
-		height: '4%',
-		borderWidth: 0.4,
-		marginLeft: 185,
-		marginTop: 215,
+		fontSize: 16,
+		color: 'black',
 		textAlign: 'center',
-		position: 'absolute',
+		borderWidth: 0.5,
 	},
-
-	// signature box
-	signatureBox: {
-		width: '50%',
-		height: '10%',
+	
+	// Signature View
+	signatureView: {
 		borderWidth: 2,
-		marginLeft: 97,
-		paddingTop: 10,
-		paddingLeft: 6,
+		justifyContent: 'center',
+	},
+	signatureText: {
+		fontSize: 15,
+		textAlign: 'left',
+		marginRight: 145,
+		marginLeft: 5,
 		paddingBottom: 40,
-		fontSize: 15,
-		fontWeight: 'bold',
-	},
-	label: {
-		fontWeight: 'bold',
-		fontSize: 15,
-	},
-
-	// Hall Pass rotation
-	box: {
-		height: 60,
-		width: 260,
-		borderRadius: 0,
-		marginVertical: 100,
-		backgroundColor: 'white',
-		position: 'absolute',
-	},
-	boxText: {
-	fontSize: 50,
-	fontWeight: 'bold',
-	color: 'black',
-	textTransform: 'uppercase',
-	textAlign: 'center',
-	},
-
+	}
 });
 
 export default styles;

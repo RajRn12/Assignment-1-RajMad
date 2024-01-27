@@ -32,7 +32,6 @@ export default function Page() {
 	const clear = () => {[onChangeName(""), onChangeNoun(""), onChangeEvent("")]; };
 
 	// for next page - passing date:
-
 	// date array
 	date_ = [0, 0, 0];
 	// call get_Today_Date function to retrieve todays date and store it in date_ array
@@ -53,7 +52,7 @@ export default function Page() {
 			{/* Second View */}
 			<View style={Styles.twoView}>	
 				{/* Name Input Box */}
-				<Text style={Styles.label}>{name_Label}</Text>
+				<Text style={Styles.pageOne_Label}>{name_Label}</Text>
 				<TextInput
 					style={Styles.input}
 					onChangeText={onChangeName}
@@ -62,7 +61,7 @@ export default function Page() {
 				/>
 			
 			{/* Noun Input Box  */}
-			<Text style={Styles.label}>{noun_Label}</Text>
+			<Text style={Styles.pageOne_Label}>{noun_Label}</Text>
 			<TextInput
 				style={Styles.input}
 				onChangeText={onChangeNoun}
@@ -71,7 +70,7 @@ export default function Page() {
 			/>
 			
 			{/* Event Input Box*/}
-			<Text style={Styles.label}>{event_Label}</Text>
+			<Text style={Styles.pageOne_Label}>{event_Label}</Text>
 			<TextInput
 				style={Styles.input}
 				onChangeText={onChangeEvent}

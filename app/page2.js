@@ -57,7 +57,6 @@ export default function Page() {
 				/>
 			</View>
 
-		
 			{/* Body */}
 			{/* Name View */}
 			<View style={Styles.nameView}>
@@ -104,7 +103,6 @@ export default function Page() {
 				/>
 				<Text>.</Text>   
 			</View>
-
 
 			{/* Signature View */}
 			<View style={Styles.signatureView}>
